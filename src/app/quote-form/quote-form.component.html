@@ -1,0 +1,28 @@
+<div class="container-fluid">
+    <div class=jumbotron>
+        <h1>Quote Page </h1>
+    </div>
+  </div>
+  <div class="container">
+      <form  #goalForm='ngForm'> 
+          <div class="form-group">
+            <label for="quote">Write Down your quote below</label>
+            <textarea class="form-control" id="description" rows="10" [(ngModel)]="newQuote.quote" name="quote" required></textarea>
+            Display {{newQuote.quote}}
+      
+          </div>
+          <div class="form-group">
+            <label for="Author">Author</label>
+            <input type="text" required class="form-control" id="author">
+          </div>
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" required class="form-control" id="name">
+  
+          </div>
+        </form>
+        <button type="submit" class="btn btn-success btn-lg">Add Quote</button>
+        
+  </div>
+  
+  

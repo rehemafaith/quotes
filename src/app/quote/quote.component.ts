@@ -1,4 +1,4 @@
-import { Component, OnInit,Input } from '@angular/core';
+import { Component, OnInit,Input, EventEmitter, Output } from '@angular/core';
 import { Quote } from '../quote'
 import { maybeQueueResolutionOfComponentResources } from '@angular/core/src/metadata/resource_loading';
 
@@ -10,6 +10,7 @@ import { maybeQueueResolutionOfComponentResources } from '@angular/core/src/meta
 export class QuoteComponent implements OnInit {
   
   @Input() quote:Quote
+  @Output() like= new EventEmitter<boolean>();
     // toogleDetails(index){
     //   this.quotes[index].showQuote = !this.quotes[index].showQuote;
   
@@ -17,7 +18,17 @@ export class QuoteComponent implements OnInit {
     
     
   // }
+  upvote:number=0;
+  downvote:number=0;
+  thumbsUp(){
+    this.upvote++;
+  }
+  
+  thumbsDown(){
+    this.downvote++;
+  }
 
+ 
   ngOnInit() {
   }
 

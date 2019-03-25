@@ -1,7 +1,7 @@
 
 <div class="container">
     <div class="row">
-      <div class="card" style="width:50%" > 
+      <div class="card" style="width:100%" > 
       <div class="w-100">
        <div class="col">
        
@@ -10,10 +10,12 @@
          <li >{{quote.author}}</li> 
          <li >{{quote.quoteText}}</li> 
          </ul> 
-        <!-- <span><i class="far fa-heart"></i></span> -->
 
-        <button style="float:left" (click)='thumbsUp(true)'>Like</button>
-        <button style="float:right" (clicks)='thumbsDown(true)'>Dislike</button>
+         
+
+        <button style="float:left" (click)='thumbsUp()'>Like {{upvote}} </button>
+        <button style="float:right" (click)='thumbsDown()'>Dislike {{downvote}}</button>
+
         </div>
        </div>
       </div>

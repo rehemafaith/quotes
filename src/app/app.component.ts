@@ -16,7 +16,9 @@ export class AppComponent {
 
     this.quotes.push(quote)
    }
-}
+  
+  }
+
   
 
 

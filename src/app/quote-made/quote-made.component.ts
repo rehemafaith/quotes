@@ -12,6 +12,13 @@ export class QuoteMadeComponent implements OnInit {
 @Input() quotes:Quote[];
 @Output() like= new EventEmitter<boolean>();
 @Output() dislike = new EventEmitter<boolean>();
+
+thumbsUp(upvoting:boolean){
+  this.like.emit(upvoting);
+}
+thumbsDown(downvoting:boolean){
+  this.like.emit(downvoting);
+}
   constructor() { }
 
   ngOnInit() {

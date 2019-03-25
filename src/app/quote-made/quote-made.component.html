@@ -1,2 +1,2 @@
 
-  <app-quote *ngFor='let quote of quotes' [quote]='quote'></app-quote>
+  <app-quote *ngFor='let quote of quotes' [quote]='quote' (like)='thumbsUp($event)'></app-quote>

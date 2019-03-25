@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Quote } from './quote';
 
 
 @Component({
@@ -8,6 +9,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   
+  quotes= [
+    new Quote ('Life is easy', 'Rehema ','Faith',0,0),
+   ]
+   addQuote(quote){
 
-  }
+    this.quotes.push(quote)
+   }
+}
+  
+
 

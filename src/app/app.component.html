@@ -1,5 +1,2 @@
-<app-quote></app-quote>
-<app-quote-form></app-quote-form>
-
-
-<router-outlet></router-outlet>
+<app-quote-form (addQuote)='addQuote($event)'></app-quote-form>
+<app-quote-made [quotes]='quotes'></app-quote-made>
